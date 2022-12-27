@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+.btn{
+    position: absolute;
+    top: 18px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    background: #000000;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn.click{
+    left: 210px;
+}
+
+.btn i{
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    line-height: 45px;
+}
+
+.btn.click i::before{
+    content: "\f00d";
+}
+
+.sidebar{
+    position: fixed;
+    background: #000000;
+    color: #fffeee;
+    width: 200px;
+    height: 100%;
+    left: -200px;
+    font-size: 1.2rem;
+    padding: 0 5px;
+    transition: 0.4s;
+}
+
+.sidebar.showon{
+    left: 0px;
+}
+
+.sidebar .text{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+
+.sidebar ul{
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    list-style: none;
+}
+
+nav>ul>li{
+    line-height: 45px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a{
+    position: relative;
+    color: #dddeee;
+    text-decoration: none;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover{
+    color: cyan;
+    background-color: #1b1b1b;
+    border-left-color: cyan;
+}
+
+.feat-show,.serv-show{
+    display: none;
+    position: static;
+}
+
+.feat-show.active {
+    display: block;
+}
+
+.serv-show.active {
+    display: block;
+}
+
+nav ul li .span span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: transform 0.4s;
+}
+
+nav ul li .span.active span {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+.entry { 
+    line-height: 42px;
+    border-bottom: none;
+}
+
+.entry a{
+    padding-left: 40px;
+}
+
+nav ul li:last-child{
+    border-bottom: 1px solid #1b1b1b;
+}
